@@ -22,9 +22,18 @@ namespace MVVMEx.Views
     /// </summary>
     public sealed partial class AutoView : Page
     {
+        private ViewModels.AutoViewModel defaultViewModel = new ViewModels.AutoViewModel();
+
         public AutoView()
         {
             this.InitializeComponent();
+            
+            this.DataContext = defaultViewModel;
+        }
+
+        public ViewModels.AutoViewModel DefaultViewModel
+        {
+            get { return this.defaultViewModel; }
         }
     }
 }
